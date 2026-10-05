@@ -3,6 +3,7 @@
 Python Package for connecting to myenergi API.
 
 """
+
 import json as jsonlib
 import logging
 import sys
@@ -18,7 +19,6 @@ from .exceptions import WrongCredentials
 _LOGGER = logging.getLogger(__name__)
 _USER_POOL_ID = "eu-west-2_E57cCJB20"
 _CLIENT_ID = "2fup0dhufn5vurmprjkj599041"
-_TRPC_BASE_URL = "https://app-api.s18.myenergi.net"
 
 
 class Connection:
@@ -39,7 +39,7 @@ class Connection:
         self.base_url = None
         self.asyncClient = asyncClient
         self.oauth_base_url = "https://myaccount.myenergi.com"
-        self.trpc_base_url = _TRPC_BASE_URL
+        self.trpc_base_url = "https://app-api.s18.myenergi.net"
         self.username = username
         self.password = password
         self.app_password = app_password
