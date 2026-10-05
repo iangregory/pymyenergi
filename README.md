@@ -152,7 +152,6 @@ async def get_data() -> None:
     # print(f"      Boost start at {zappi.boost_start_hour}:{zappi.boost_start_minute} add {zappi.boost_amount}kWh")
     print(f"Smart Boost start at {zappi.smart_boost_start_hour}:{zappi.smart_boost_start_minute} add {zappi.smart_boost_amount}kWh")
 
-
 loop = asyncio.get_event_loop()
 loop.run_until_complete(get_data())
 ```
